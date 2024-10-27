@@ -1,0 +1,34 @@
+#dataset parameters
+BUCKET_NAME : 'nlpdataset'
+ZIP_FILE_NAME  : 'dataset.zip'
+LABEL :  'label'
+TWEET : 'tweet'
+
+#Dataset Parameters
+ID : 'id'
+AXIS : 1
+DROP_COLUMNS = ['Unnamed: 0','count','hate_speech','offensive_language','neither']
+CLASS : 'class'
+
+
+#tokenizinng parameters
+MAX_WORDS : 50000
+MAX_LEN : 300
+
+
+#Model parameters
+
+ACTIVATION: 'sigmoid'
+METRICES: 'accuracy'
+LOSS: 'binary_crossentropy'
+OPTIMIZER: 'adam'
+DROP_OUT : 0.2
+EMBEDDING_DIM : 100
+RECURRENT_DROPOUT : 0.2
+LSTM_OUTPUT_SIZE : 100
+
+#Training parameters
+
+BATCH_SIZE: 128
+EPOCHS: 1
+VALIDATION_SPLIT : 0.2

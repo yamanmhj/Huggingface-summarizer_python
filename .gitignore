@@ -1,0 +1,13 @@
+__pycache__/
+*.csv
+*.log
+venv/
+/Load_data_here/Loaded_dataset/*.zip
+/Load_data_here/Loaded_dataset/*.csv
+/Load_data_here/Transforrmed_dataset/*.csv
+/Load_data_here/Training_dataset/*.pkl
+nlpexp1.py
+
+
+
+*.pyc
