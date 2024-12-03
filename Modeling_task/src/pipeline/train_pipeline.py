@@ -6,6 +6,7 @@ sys.path.append("/Users/yamanmaharjan/Documents/Personal_yaman/Huggingface-summa
 from sklearn.pipeline import Pipeline
 from components.data_ingestion import DataIngestion
 from components.data_transformation import DataTransformation
+from components.model_trainer import ModelTrainer
 
 
 
@@ -19,11 +20,13 @@ class The_Training_pipeline:
     def __init__(self):
         self.DataIngestion_object = DataIngestion()
         self.DataTrasformation_object = DataTransformation()
+        self.DataTraining_object = ModelTrainer()
         
               
         self.pipeline = Pipeline(steps=[
             ('downloading_dataset', self.DataIngestion_object.initiate_data_Extraction), 
-            ('transforming_dataset', self.DataTrasformation_object.Full_conversion_of_dataset) 
+            ('transforming_dataset', self.DataTrasformation_object.Full_conversion_of_dataset),
+            ('training_model', self.DataTraining_object.initiate_train_model)
         ])
 
     def run_program(self):
